@@ -1,6 +1,6 @@
 // src/screens/HomeScreen.js
-import React, { useContext } from "react";
-import { View, Button, Text, StyleSheet } from "react-native";
+import { useContext } from "react";
+import { Button, StyleSheet, Text, View } from "react-native";
 import { AuthContext } from "../contexts/AuthContext";
 
 export default function HomeScreen({ navigation }) {
@@ -26,10 +26,9 @@ export default function HomeScreen({ navigation }) {
         title="Record Sensor/Tremor"
         onPress={() => navigation.navigate("Sensors")}
       />
-      <Button
-        title="Take Photo"
-        onPress={() => navigation.navigate("Camera")}
-      />
+      <Button title="Take Photo" onPress={() => navigation.navigate("Camera")} />
+      <Button title="Dashboard" onPress={() => navigation.navigate("Dashboard")} />
+<Button title="Log Location" onPress={() => navigation.navigate("Location")} />
       <Button title="Logout" onPress={logout} color="red" />
     </View>
   );
